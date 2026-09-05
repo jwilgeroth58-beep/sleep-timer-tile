@@ -67,6 +67,22 @@ Command line (once the Gradle wrapper is present):
 - [ ] **Phase 6 — Release pipeline.** Signing keystore, GitHub Actions signed
       release on tag, Obtainium instructions.
 
+## Installing on the phone (Obtainium)
+
+Repo: <https://github.com/jwilgeroth58-beep/sleep-timer-tile>
+
+1. Install **Obtainium** (from its own GitHub releases or F-Droid).
+2. Obtainium → **Add App** → paste the repo URL above → it finds the latest
+   GitHub Release and its APK → **Install**.
+3. Obtainium then checks for new releases and offers updates automatically.
+
+**First-time switch from a debug build:** a debug-signed install and the
+release-signed APK have different keys, so Android won't update one into the
+other. Uninstall the debug build first — and because Device Admin is on, you
+must **disable Device Admin before uninstalling** (in-app button, or Settings →
+Security → Device admin apps). Then install the release build via Obtainium and
+re-grant permissions once.
+
 ## Releasing a new version
 
 1. Bump the version in `app/build.gradle.kts` — increase **`versionCode`** by 1
