@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Sleep Timer Tile</string>
+
+    <!-- Quick Settings tile -->
+    <string name="tile_label">Sleep Timer</string>
+    <string name="tile_label_active">Off in %1$s</string>
+    <string name="tile_tap_toast">Sleep Timer tile tapped ✓</string>
+
+    <!-- Device Admin (screen-off permission) -->
+    <string name="admin_explanation">Sleep Timer uses this only to turn your screen off when the timer ends. It never wipes data, changes your PIN, or does anything else a device admin can do.</string>
+
+    <!-- Countdown notification -->
+    <string name="notif_channel_name">Sleep timer countdown</string>
+    <string name="notif_channel_desc">Shows the running sleep timer and how long is left.</string>
+    <string name="notif_title">Sleep timer running</string>
+    <string name="notif_text">Screen turns off when the timer ends</string>
+    <string name="notif_cancel">Cancel</string>
+
+    <!-- Media pause / Notification Listener -->
+    <string name="listener_label">Sleep Timer media control</string>
+</resources>

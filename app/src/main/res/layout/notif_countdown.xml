@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Custom content view for the ongoing sleep-timer notification.
+
+  Layout:  [ moon icon ]  Title / subtext .......... [ 23:59 ]
+
+  Notes:
+  - The Chronometer counts DOWN on its own once we hand it a base time; no
+    background service ticks it.
+  - Text uses the androidx "Compat.Notification" text appearances so the colors
+    adapt to light/dark notification themes instead of us hard-coding them.
+  - Wrapped by NotificationCompat.DecoratedCustomViewStyle, so the system still
+    draws the header (app name, small icon) and the Cancel action below this.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notif_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+
+        <TextView
+            android:id="@+id/notif_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Info" />
+    </LinearLayout>
+
+    <Chronometer
+        android:id="@+id/notif_chrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textAppearance="@style/TextAppearance.Compat.Notification.Title"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+</LinearLayout>

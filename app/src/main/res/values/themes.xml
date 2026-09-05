@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.SleepTimerTile" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- Transparent theme so the long-press duration picker floats as a dialog
+         over whatever is behind it instead of filling the screen. -->
+    <style name="Theme.SleepTimerTile.Transparent" parent="Theme.SleepTimerTile">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

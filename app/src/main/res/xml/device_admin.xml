@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Declares exactly what powers this app requests as a Device Admin. We ask for
+  ONLY <force-lock>, which permits DevicePolicyManager.lockNow() (turn the screen
+  off / lock). We deliberately do NOT request wipe-data, password policies, or
+  camera disabling, etc. Samsung's consent screen lists the scary superset of
+  what Device Admin *can* do; this file is the honest, minimal truth of what we
+  actually use.
+-->
+<device-admin xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-policies>
+        <force-lock />
+    </uses-policies>
+</device-admin>
